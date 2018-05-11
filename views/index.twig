@@ -1,0 +1,44 @@
+{# /view/twig/templates/base.html #}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Home{% endblock %} - Twig</title>
+    <style type="text/css">
+        {% block stylesheet %}
+        #header, #main, #footer{width:600px; margin:0px auto; border:1px solid #333;}
+        #main{border:0px;}
+        #header { height:120px;margin-bottom:10px;}
+        #footer{ height:80px;clear:both;margin-top:10px;}
+        #header h1{margin-left:20px;}
+        #header span{margin-left:20px;}
+        #leftsider{width:125px; float:left; border:1px solid #333; height:200px;
+            padding-top:10px;}
+        #leftsider span{width:100%; height:30px; line-height:30px; clear:both;
+            padding-left:15px; display:block;}
+        #rightsider{width:460px; float:right; border:1px solid #333; height:250px;}
+        .clear{clear:both;}
+        {% endblock %}
+    </style>
+</head>
+<body>
+<div id="header">
+    <h1>Twig Template Test</h1>
+    <span><a href="javascript:void(0);">Home</a></span>
+</div>
+<div id="main">
+    <div id="leftsider">
+        {% block leftsider %}
+            <span>系统模块1</span>
+            <span>系统模块2</span>
+        {% endblock %}
+    </div>
+    <div id="rightsider">
+        {% block rightsider %}Hello {{name.name}}{% endblock %}
+    </div>
+</div>
+<div class="clear"></div>
+<div id="footer">
+    {% block footer %}<h1>Twig Footer</h1>{% endblock %}
+</div>
+</body>
+</html>

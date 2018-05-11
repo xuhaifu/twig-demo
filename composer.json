@@ -1,0 +1,10 @@
+{
+  "name": "test/twig_demo",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+
+  "require": {
+    "twig/twig":"^2.0"
+  }
+}
