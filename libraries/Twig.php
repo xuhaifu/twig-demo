@@ -22,7 +22,7 @@ class Twig
     public function __construct($config)
     {
         $config_default = array(
-            'cache_dir' => true, //开启缓存
+            'cache_dir' => false, //开启缓存
             'debug' => false, //开启调试模式（dump函数可用）
             'auto_reload' => true,
             'extension' => '.tpl', //默认后缀名
